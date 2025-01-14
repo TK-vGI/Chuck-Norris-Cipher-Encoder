@@ -1,0 +1,19 @@
+package chucknorris;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = userInput(scanner);
+
+        for (int i = 0;i < s.length();i++) {
+            System.out.print( s.charAt(i) + " ");
+        }
+    }
+
+    private static String userInput(Scanner scanner) {
+        System.out.println("Input string:");
+        return scanner.nextLine();
+    }
+}

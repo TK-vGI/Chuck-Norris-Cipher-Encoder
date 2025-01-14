@@ -1,0 +1,27 @@
+package chucknorris;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = userInput(scanner);
+        System.out.println();
+        System.out.println("The result: ");
+        convertToBinary(s);
+    }
+
+    private static void convertToBinary(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int binary = s.charAt(i);
+            String binary_c = String.format("%7s", Integer.toBinaryString(binary)).replace(" ", "0");
+            System.out.println(c + " = " + binary_c);
+        }
+    }
+
+    private static String userInput(Scanner scanner) {
+        System.out.println("Input string:");
+        return scanner.nextLine();
+    }
+}
